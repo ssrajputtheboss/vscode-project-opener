@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>VSCode Project Opener</title>
+  </head>
+  <body>
+    <script src="render.js"></script>
+    <div
+        style="
+          margin: 2px;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+          align-items: start;
+          width: 100%;
+        "
+      >
+        <input type="text" placeholder="project name" id="name" />
+        <input type="text" placeholder="project path" id="path" />
+        <button
+          onclick="addProject(event)"
+          id="stop"
+          style="padding: 2px; background-color: blue; color: white"
+        >
+          ADD PROJECT
+        </button>
+      </div>
+    </div>
+    <div
+      id="container"
+      style="display: flex; justify-content: start; flex-direction: column; align-items: center"
+    >
+    <script>
+      createProjects();
+    </script>
+  </body>
+</html>

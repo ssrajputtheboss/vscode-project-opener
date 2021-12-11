@@ -1,0 +1,39 @@
+{
+  "name": "projects-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "productName": "VSCode project opener",
+  "scripts": {
+    "start": "electron .",
+    "test": "node main",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "project-app"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "icon/icon.ico",
+    "requestedExecutionLevel": "requireAdministrator"
+  },
+  "nsis": {
+    "installerIcon": "icon/icon.ico",
+    "uninstallerIcon": "icon/icon.ico",
+    "uninstallDisplayName": "VSCode Project Opener",
+    "licence": "LICENSE",
+    "oneClick": true,
+    "allowToChangeInstallationDirectory": true
+  },
+  "author": "shashank singh",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.2",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "electron-store": "^8.0.1"
+  }
+}
